@@ -264,11 +264,11 @@ mod tests {
     use super::*;
 
     // #[test]
-    fn ajj93() {
-        let input_vec = parse_line_to_hand_labels("ajj93");
-        let hand_type = parse_line_to_hand_type(&input_vec);
-        assert_eq!(hand_type, HandType::ThreeOfAKind)
-    }
+    // fn ajj93() {
+    //     let input_vec = parse_line_to_hand_labels("ajj93");
+    //     let hand_type = parse_line_to_hand_type(&input_vec);
+    //     assert_eq!(hand_type, HandType::ThreeOfAKind)
+    // }
     // #[test]
     // fn parse_one_pair_correctly() {
     //     let hand_type = parse_line_to_hand_type("A23A4");

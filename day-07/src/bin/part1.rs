@@ -117,7 +117,7 @@ fn parse_line_to_hand_type(line: &str) -> HandType {
         }
     }
 
-    let mut values: Vec<u32> = hash_map.values().cloned().collect();
+    let values: Vec<u32> = hash_map.values().cloned().collect();
 
     if values.iter().any(|count| *count == 5) {
         return HandType::FiveOfAKind;
