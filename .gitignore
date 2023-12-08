@@ -14,3 +14,6 @@ Cargo.lock
 *.pdb
 input.txt
 input_test.txt
+input_1_test1.txt
+input_1_test2.txt
+input_2_test.txt
