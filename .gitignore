@@ -12,8 +12,8 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
-input.txt
-input_test.txt
-input_1_test1.txt
-input_1_test2.txt
-input_2_test.txt
+# Ignore files that contain "input"
+input*.txt
+
+# But don't ignore files that contain "test"
+!input*test*.txt
