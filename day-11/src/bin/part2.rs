@@ -20,20 +20,13 @@ fn process(input: &str, multiplier: usize) -> String {
             let extra_row_count = count_extra_row(point_a, point_b, &empty_rows) as isize;
 
             let mut distance = (point_a.row as isize - point_b.row as isize).abs()
-                + (point_a.column as isize - point_b.column as isize).abs()
-                - extra_col_count
-                - extra_row_count;
+                + (point_a.column as isize - point_b.column as isize).abs();
 
-            if extra_col_count == 1 {
-                distance += multiplier as isize;
-            } else if extra_col_count > 1 {
-                distance += extra_col_count * multiplier as isize;
-            }
-            if extra_row_count == 1 {
-                distance += multiplier as isize;
-            } else if extra_row_count > 1 {
-                distance += extra_row_count * multiplier as isize;
-            }
+            distance -= extra_col_count;
+            distance -= extra_row_count;
+
+            distance += extra_col_count * multiplier as isize;
+            distance += extra_row_count * multiplier as isize;
 
             // println!(
             //     "distance between point {}. and pont {}. is {}",
